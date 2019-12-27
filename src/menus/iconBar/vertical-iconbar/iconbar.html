@@ -10,15 +10,15 @@
 </head>
 <body>
   <div class="icon-bar">
-    <a href="#" onclick="myFunction(event)" class="active"><i class="fa fa-home"></i></a>
-    <a href="#" onclick="myFunction(event)"><i class="fa fa-search"></i></a>
-    <a href="#" onclick="myFunction(event)"><i class="fa fa-envelope"></i></a>
-    <a href="#" onclick="myFunction(event)"><i class="fa fa-globe"></i></a>
-    <a href="#" onclick="myFunction(event)"><i class="fa fa-trash"></i></a>
+    <a href="#" onclick="myFunction(this)" class="active"><i class="fa fa-home"></i></a>
+    <a href="#" onclick="myFunction(this)"><i class="fa fa-search"></i></a>
+    <a href="#" onclick="myFunction(this)"><i class="fa fa-envelope"></i></a>
+    <a href="#" onclick="myFunction(this)"><i class="fa fa-globe"></i></a>
+    <a href="#" onclick="myFunction(this)"><i class="fa fa-trash"></i></a>
   </div>
 
   <script>
-    function myFunction(event) {
+    function myFunction(x) {
       let arr = document.getElementsByTagName('a');
       let newArr = [...arr];
 
@@ -26,7 +26,7 @@
         newArr[i].classList.remove('active')
       };
 
-      event.currentTarget.classList.add('active');
+      x.classList.add('active');
     }
 
   </script>
