@@ -1,0 +1,36 @@
+.icon-bar {
+  display: flex;
+  background-color: #555;
+}
+
+
+.icon-bar a {
+  display: block;
+  width: 20%;
+  padding: 12px 0;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.icon-bar a.active {
+  background-color: #4CAF50;
+}
+
+@media (max-width: 568px) {
+  .icon-bar {
+    flex-direction: column;
+    width: 90px;
+  }
+
+  .icon-bar a {
+    width: auto
+  }
+}
+
+

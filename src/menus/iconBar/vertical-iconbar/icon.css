@@ -1,0 +1,23 @@
+.icon-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: #555;
+  width: 90px;
+}
+
+.icon-bar a {
+  width: auto;
+  text-align: center;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 36px;
+  transition: all 0.3s ease;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.icon-bar a.active {
+  background-color: #4caf50;
+}
