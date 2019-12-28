@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="accordion.css">
+  <title>Accordion</title>
+</head>
+<body>
+  <div class="container">
+    <button onclick="myFunction(event)" class="accordion">Section 1</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam et aliquid, vel
+        velit necessitatibus quis temporibus magnam quisquam maxime numquam, aspernatur expedita
+        dolorem qui? Ex eum officiis at incidunt necessitatibus distinctio nisi! Repellendus unde
+        ducimus minus harum reprehenderit laborum, tempora repellat magnam dolorum, quam officiis veniam. Libero ipsum
+        veniam a?
+      </p>
+    </div>
+
+    <button onclick="myFunction(event)" class="accordion">Section 2</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam et aliquid, vel
+        velit necessitatibus quis temporibus magnam quisquam maxime numquam, aspernatur expedita
+        dolorem qui? Ex eum officiis at incidunt necessitatibus distinctio nisi! Repellendus unde
+        ducimus minus harum reprehenderit laborum, tempora repellat magnam dolorum, quam officiis veniam. Libero ipsum
+        veniam a?
+      </p>
+    </div>
+
+    <button onclick="myFunction(event)" class="accordion">Section 3</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam et aliquid, vel
+        velit necessitatibus quis temporibus magnam quisquam maxime numquam, aspernatur expedita
+        dolorem qui? Ex eum officiis at incidunt necessitatibus distinctio nisi! Repellendus unde
+        ducimus minus harum reprehenderit laborum, tempora repellat magnam dolorum, quam officiis veniam. Libero ipsum
+        veniam a?
+      </p>
+    </div>
+  </div>
+</body>
+
+<script>
+  function myFunction(event) {
+    let btn = event.currentTarget;
+    let panel = event.currentTarget.nextElementSibling;
+    btn.classList.toggle('active');
+    panel.classList.toggle('active');
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  }
+</script>
+</html>
