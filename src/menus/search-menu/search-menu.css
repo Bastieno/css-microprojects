@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  background-color: lightgray;
+}
+
+.left {
+  flex: 35%;
+  background-color: #bbb;
+}
+
+.left h2 {
+  padding: 16px;
+}
+
+.right {
+  flex: 65%;
+  padding: 16px;
+  background-color: #ddd;
+}
+
+.menu {
+  padding: 5px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.menu li {
+  padding: 16px
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000
+}
+
+.menu li:hover {
+  background-color: #eee;
+}
+
+#myInput {
+  width: 100%;
+  outline: none;
+  padding: 12px;
+  font-size: 18px;
+}
