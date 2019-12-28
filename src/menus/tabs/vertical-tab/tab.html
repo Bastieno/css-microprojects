@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="tab.css">
+  <title>Tabs</title>
+</head>
+
+<body>
+  <h2>Vertical Tabs</h2>
+  <p>Click on the buttons inside the tabbed menu:</p>
+
+  <div class="container">
+    <div class="tab">
+      <button class="tablinks" id="default" onclick="openCity(event, 'Abuja')">Abuja</button>
+      <button class="tablinks" onclick="openCity(event, 'Accra')">Accra</button>
+      <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+    </div>
+
+    <div class="tabcontent-container">
+      <div class="tabcontent" id="Abuja">
+        <h3>Abuja</h3>
+        <p>Abuja is the capital of Nigeria</p>
+      </div>
+
+      <div class="tabcontent" id="Accra">
+        <h3>Accra</h3>
+        <p>Accra is the capital of Ghana</p>
+      </div>
+
+      <div class="tabcontent" id="London">
+        <h3>London</h3>
+        <p>London is the capital of England</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  function openCity(event, city) {
+    const tablinks = document.getElementsByClassName('tablinks');
+    const tabcontent = document.getElementsByClassName('tabcontent')
+
+    for (let i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove('active')
+    }
+
+    for (let i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = 'none'
+    }
+
+    const currentTabContent = document.getElementById(city);
+    currentTabContent.style.display = 'block';
+    event.currentTarget.classList.add('active')
+  }
+
+  document.getElementById('default').click()
+
+</script>
+
+</html>
