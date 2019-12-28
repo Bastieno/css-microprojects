@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="sidenav.css">
+  <title>Side Nav Push Content</title>
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  <div id="main">
+    <h2>Sidenav Push Content</h2>
+    <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a
+      black see-through background-color to this div when the sidenav is opened.</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()" title="Open side nav">&#9776</span>
+  </div>
+</body>
+
+<script>
+  function openNav() {
+    document.getElementById('mySidenav').style.width = '200px';
+    document.getElementById('main').style.marginLeft = '200px';
+    document.getElementById('main').style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+  }
+
+  function closeNav() {
+      document.getElementById('mySidenav').style.width = '0';
+      document.getElementById('main').style.marginLeft = '0';
+      document.getElementById('main').style.backgroundColor = 'white';
+  }
+</script>
+</html>
