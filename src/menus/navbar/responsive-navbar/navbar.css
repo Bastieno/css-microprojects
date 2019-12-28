@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -9,11 +13,10 @@ html, body {
   justify-content: space-between;
   background-color: #555;
   align-items: center;
-  padding-right: 12px;
 }
 
 .navlink {
-  display: inline-block;
+  display: block;
   background-color: inherit;
   color: #fff;
   padding: 12px 22px;
@@ -21,6 +24,7 @@ html, body {
   font-size: 15px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .content {
@@ -42,30 +46,39 @@ html, body {
   margin-right: 10px;
   font-size: 24px;
   display: none;
+  cursor: pointer;
 }
 
-@media (max-width: 576px) {
-  .nav {
-    align-items: unset;
+@media screen and (max-width: 600px) {
+  .nav button:not(:first-child) {
+    display: none;
   }
 
-  .left {
-    flex-direction: column;
+  .nav button {
+    width: 100%;
   }
 
-  .navlink:not(#default) {
-    display: none
+  .nav .right {
+    float: right;
+    display: block;
   }
-
-  .right {
+  .nav .left {
     display: block;
   }
 }
 
-@media (min-width: 577px) {
-  .navlink {
-    display: inline-block;
+@media screen and (max-width: 600px) {
+  .nav.responsive {
+    position: relative;
+    display: block;
+  }
+  .nav.responsive .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive button {
+    display: block;
+    text-align: left;
   }
 }
-
-

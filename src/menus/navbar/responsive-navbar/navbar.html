@@ -11,14 +11,14 @@
 </head>
 
 <body>
-  <div class="nav">
+  <div id="topnav" class="nav">
     <div class="left">
-      <button id="default" class="navlink">Home</button>
+      <button class="navlink">Home</button>
       <button class="navlink">News</button>
       <button class="navlink">Contact</button>
       <button class="navlink">About</button>
     </div>
-    <div class="right" onclick="openHiddenLinks()">
+    <div class="right" onclick="toggleHiddenLinks()">
       <i class="fa fa-bars"></i>
     </div>
   </div>
@@ -30,16 +30,16 @@
 </body>
 
 <script>
-  function openHiddenLinks() {
-    const navlinks = document.getElementsByClassName('navlink');
-
-    for (let i = 1; i < navlinks.length; i++) {
-      if (navlinks[i].style.display === 'none' || navlinks[i].style.display === '') {
-        navlinks[i].style.display = 'block'
-      } else {
-        navlinks[i].style.display = 'none'
-      }
+  function toggleHiddenLinks() {
+    console.log('I was clicked')
+    const x = document.getElementById('topnav')
+    console.log(x)
+    if (x.className === 'nav') {
+      x.classList.add('responsive')
+    } else {
+      x.classList.remove('responsive')
     }
+
   }
 </script>
 
