@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="navbar.css">
+  <title>Responsive Navigation Bar</title>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="left">
+      <button id="default" class="navlink">Home</button>
+      <button class="navlink">News</button>
+      <button class="navlink">Contact</button>
+      <button class="navlink">About</button>
+    </div>
+    <div class="right" onclick="openHiddenLinks()">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+
+  <div class="content">
+    <h3>Home</h3>
+    <p>Home is where the heart is..</p>
+  </div>
+</body>
+
+<script>
+  function openHiddenLinks() {
+    const navlinks = document.getElementsByClassName('navlink');
+
+    for (let i = 1; i < navlinks.length; i++) {
+      if (navlinks[i].style.display === 'none' || navlinks[i].style.display === '') {
+        navlinks[i].style.display = 'block'
+      } else {
+        navlinks[i].style.display = 'none'
+      }
+    }
+  }
+</script>
+
+</html>
