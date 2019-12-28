@@ -1,0 +1,47 @@
+.container {
+  width: 80%;
+  margin: auto
+}
+
+.accordion {
+  width: 100%;
+  background-color: lightgray;
+  text-align: left;
+  padding: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.panel {
+  display: none;
+  padding: 0 16px;
+  max-height: 0;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion:hover {
+  background-color: darkgray;
+}
+
+.accordion::after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: -10px;
+}
+
+.accordion.active::after {
+  content: "\2212";
+}
+
+.accordion.active {
+  background-color: darkgray;
+}
+
+.panel.active {
+  display: block;
+}
