@@ -1,0 +1,15 @@
+
+.pagination a {
+  float: left;
+  text-decoration: none;
+  padding: 8px 16px;
+  color: black;
+}
+
+.pagination a:hover {
+  background-color: #ccc;
+}
+
+.pagination a.active {
+  background-color: dodgerblue;
+}
