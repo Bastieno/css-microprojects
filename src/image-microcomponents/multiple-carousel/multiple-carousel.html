@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="multiple-carousel.css">
+  <title>Multiple Carousel</title>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <h2 style="text-align: center;">Multiple Carousel</h2>
+    <p>Slideshow 1</p>
+    <div class="slideshow-container">
+      <div class="myslides1 fade">
+        <div class="numbertext">1 / 4</div>
+        <img style="width: 100%; max-height: 400px;"
+          src="https://images.unsplash.com/photo-1528826792843-696806ff0b87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="image-1">
+        <div class="text">Caption One</div>
+      </div>
+      <div class="myslides1 fade">
+        <div class="numbertext">2 / 4</div>
+        <img style="width: 100%; max-height: 400px;"
+          src="https://images.unsplash.com/photo-1491956142110-8a4226a12077?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="image-2">
+        <div class="text">Caption Two</div>
+      </div>
+      <div class="myslides1 fade">
+        <div class="numbertext">3 / 4</div>
+        <img style="width: 100%; max-height: 400px;"
+          src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+          alt="image-3">
+        <div class="text">Caption Three</div>
+      </div>
+      <div class="myslides1 fade">
+        <div class="numbertext">4 / 4</div>
+        <img style="width: 100%; max-height: 400px;"
+          src="https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+          alt="image-4">
+        <div class="text">Caption Four</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+
+      <br>
+
+    <p>Slideshow 2</p>
+    <div class="slideshow-container">
+      <div class="myslides2 fade">
+        <div class="numbertext">1 / 4</div>
+        <img style="width: 100%; max-height: 400px;"
+          src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="image-1">
+        <div class="text">Caption One</div>
+      </div>
+      <div class="myslides2 fade">
+        <div class="numbertext">2 / 4</div>
+        <img style="width: 100%; max-height: 400px;"
+          src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="image-2">
+        <div class="text">Caption Two</div>
+      </div>
+      <div class="myslides2 fade">
+        <div class="numbertext">3 / 4</div>
+        <img style="width: 100%; max-height: 400px;"
+          src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
+          alt="image-3">
+        <div class="text">Caption Three</div>
+      </div>
+      <div class="myslides2 fade">
+        <div class="numbertext">4 / 4</div>
+        <img style="width: 100%; max-height: 400px;"
+          src="https://images.unsplash.com/photo-1527862345617-bdedfa6392dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+          alt="image-4">
+        <div class="text">Caption Four</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+    </div>
+  </div>
+</body>
+
+<script>
+  let slideIndex = [1, 1]
+  let slideId = ['myslides1', 'myslides2']
+  showSlides(1, 0);
+  showSlides(1, 1);
+
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no)
+  }
+
+  function showSlides(n, no) {
+    slides = document.getElementsByClassName(slideId[no]);
+
+    if (n > slides.length) slideIndex[no] = 1;
+    if (n < 1) slideIndex[no] = slides.length
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+
+    slides[slideIndex[no] - 1].style.display = 'block';
+  }
+</script>
+
+</html>
