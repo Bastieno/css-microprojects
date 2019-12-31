@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.myslides {
+  position: relative;
+}
+
+.numbertext {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  padding: 8px 12px;
+  color: white;
+}
+
+.text {
+  background-color: rgba(0, 0, 0, 1);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: #f2f2f2;
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 15px;
+}
+
+.column {
+  opacity: 0.7;
+  cursor: pointer
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.active, .column:hover {
+  opacity: 1
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.row {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.column {
+  width: 25%;
+  float: left;
+}
+
+@keyframes fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
+
+@media (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px;
+  }
+}
