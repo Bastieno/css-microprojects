@@ -14,9 +14,9 @@
     <h2>Image Grid</h2>
     <p>Click on the buttons to change the grid view.</p>
     <div class="button-group">
-      <button class="btn" onclick="one(this)">1</button>
-      <button class="btn active" onclick="two(this)">2</button>
-      <button class="btn" onclick="four(this)">4</button>
+      <button class="btn" onclick="changeGrid(this, '50%', '100%')">1</button>
+      <button class="btn active" onclick="changeGrid(this, '80%', '50%')">2</button>
+      <button class="btn" onclick="changeGrid(this, '100%', '25%')">4</button>
     </div>
   </div>
   <div class="row">
@@ -93,59 +93,21 @@
 </body>
 
 <script>
-  function one(btn) {
+  function changeGrid(btnElement, width, flex) {
     row = document.getElementsByClassName('row')[0]
     columns = document.getElementsByClassName('column');
     buttons = document.getElementsByClassName('btn')
 
-    row.style.width = '50%';
-    row.style.margin = 'auto';
     for (let i = 0; i < columns.length; i++) {
-      columns[i].style.flex = '100%'
+      columns[i].style.flex = flex
     }
 
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].classList.remove('active')
     }
 
-    btn.classList.add('active')
-  }
-
-  function two(btn) {
-    row = document.getElementsByClassName('row')[0]
-    columns = document.getElementsByClassName('column');
-    buttons = document.getElementsByClassName('btn');
-
-
-    row.style.width = '80%';
-    row.style.margin = 'auto';
-    for (let i = 0; i < columns.length; i++) {
-      columns[i].style.flex = '50%'
-    }
-
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove('active')
-    }
-
-    btn.classList.add('active')
-  }
-
-  function four(btn) {
-    row = document.getElementsByClassName('row')[0]
-    columns = document.getElementsByClassName('column');
-    buttons = document.getElementsByClassName('btn');
-
-
-    row.style.width = '100%';
-    for (let i = 0; i < columns.length; i++) {
-      columns[i].style.flex = '25%'
-    }
-
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove('active')
-    }
-
-    btn.classList.add('active')
+    row.style.width = width;
+    btnElement.classList.add('active')
   }
 </script>
 
