@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  width: 70%;
+  margin: auto;
+}
+
+.column {
+  flex: 50%;
+  padding: 4px 4px
+}
+
+.header {
+  text-align: center;
+}
+
+.column img {
+  vertical-align: middle;
+  margin-top: 8px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.button-group button {
+  padding: 12px;
+  border: none;
+  outline: none;
+  background-color: #ccc;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background-color: #777;
+}
+
+.button-group button.active {
+  background-color: #4caf50;
+}
+
+@media (max-width: 800px) {
+  .column {
+    flex: 50%
+  }
+}
+
+@media(max-width: 576px) {
+  .column {
+    flex: 100%
+  }
+}
