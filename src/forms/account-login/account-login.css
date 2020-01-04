@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  background-color: #EBEBEB;
+}
+
+input[type=text], input[type=password] {
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+  padding: 0px 25px;
+  height: 55px;
+  margin: 16px 0;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  border: 1px solid #4caf50;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 55px 85px;
+  color: #212529;
+  width: 560px;
+  height: 500px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.form-content h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.bottom label {
+  color: #9B9B9B;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #fff;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4caf50;
+}
+
+a {
+  text-decoration: none;
+  color: #666666;
+}
+
+a:hover {
+  color: #4caf50;
+}
+
+@media (max-width: 567px) {
+  .login-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .login-container {
+    padding: 25px 45px;
+  }
+}
