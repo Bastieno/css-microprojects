@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -5,6 +7,7 @@
 body {
   padding: 20px;
   background-color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
 }
 
 .btn-container {
@@ -145,6 +148,62 @@ body {
   background-color: blue;
 }
 
+.column-100 {
+  flex: 0 0 100%;
+  padding: 0 8px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.skills-card {
+  background-color: #fff;
+  color: #000;
+  /* height: 500px;
+  max-height: 500px; */
+  padding: 20px;
+}
+
+.column-100 .skills-card .content {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.column-100 .skills-card .content .content-items {
+  /* background-color: #4caf50; */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.skills-card .header {
+  color: #705548;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 20px;
+  margin: 15px 0 30px;
+  font-size: 31.92px;
+  line-height: 2.508rem;
+}
+
+.skills-card .header h4 {
+  margin: 1.14rem 0 0.912rem 0;
+  font-weight: normal;
+}
+
+.fa {
+  font-size: 60px;
+}
+
+
+/* h3 {
+  font-size: 2.28rem;
+  line-height: 2.508rem;
+  margin: 1.14rem 0 0.912rem 0;
+} */
 /* .text {
   position: absolute;
   color: #000;
