@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hackerank test</title>
+</head>
+<body>
+  Hello world
+</body>
+<script>
+  function timeConversion(s) {
+    if (!s || typeof s !== 'string') {
+      console.log('invalid string format')
+      return
+    }
+
+    if (s.split(':').length < 3) {
+      console.log('invalid string format')
+      return
+    }
+
+    const hr = s.split(':')[0]
+    const min = s.split(':')[1]
+    const sec = s.split(':')[2].substring(0,2)
+    const timeOfDay = s.split(':')[2].substring(2).toUpperCase()
+
+    if (!hr || parseInt(hr, 10) < 0 || parseInt(hr, 10) > 12) {
+      console.log('Invalid hour input')
+      return
+    }
+
+    if (!min || parseInt(min, 10) < 0 || parseInt(min, 10) > 59) {
+      console.log('Invalid minute input')
+      return
+    }
+
+    if (!sec || parseInt(sec, 10) < 0 || parseInt(sec, 10) > 59) {
+      console.log('Invalid seconds input')
+      return
+    }
+
+     if (["AM", "PM"].indexOf(timeOfDay) < 0) {
+      console.log('Unknown format')
+      return
+    }
+
+    if (timeOfDay === 'PM'  && parseInt(hr, 10) !== 12) {
+      newHr = `${parseInt(hr, 10) + 12}`.length === 2 ? `${parseInt(hr, 10) + 12}` : `0${parseInt(hr, 10) + 12}`
+      newMin = `${parseInt(min, 10)}`.length === 2 ? `${parseInt(min, 10)}` : `0${parseInt(min, 10)}`
+      newSec = `${parseInt(sec, 10)}`.length === 2 ? `${parseInt(sec, 10)}` : `0${parseInt(sec, 10)}`
+    } else if (timeOfDay === 'PM' && parseInt(hr, 10) === 12) {
+      newHr = `${parseInt(hr, 10)}`
+      newMin = `${parseInt(min, 10)}`.length === 2 ? `${parseInt(min, 10)}` : `0${parseInt(min, 10)}`
+      newSec = `${parseInt(sec, 10)}`.length === 2 ? `${parseInt(sec, 10)}` : `0${parseInt(sec, 10)}`
+    } else if (timeOfDay === 'AM' && parseInt(hr, 10) === 12) {
+      newHr = '00'
+      newMin = `${parseInt(min, 10)}`.length === 2 ? `${parseInt(min, 10)}` : `0${parseInt(min, 10)}`
+      newSec = `${parseInt(sec, 10)}`.length === 2 ? `${parseInt(sec, 10)}` : `0${parseInt(sec, 10)}`
+    }
+    else {
+      newHr = `${parseInt(hr, 10)}`.length === 2 ? `${parseInt(hr, 10)}` : `0${parseInt(hr, 10)}`
+      newMin = `${parseInt(min, 10)}`.length === 2 ? `${parseInt(min, 10)}` : `0${parseInt(min, 10)}`
+      newSec = `${parseInt(sec, 10)}`.length === 2 ? `${parseInt(sec, 10)}` : `0${parseInt(sec, 10)}`
+    }
+
+    convertedTime = `${newHr}:${newMin}:${newSec}`
+    console.log(convertedTime)
+    return convertedTime
+  }
+
+  timeConversion('10:20:59AM')
+</script>
+</html>
